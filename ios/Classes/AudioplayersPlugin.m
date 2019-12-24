@@ -31,7 +31,7 @@ bool _isDealloc = false;
 
 FlutterEngine *_headlessEngine;
 FlutterMethodChannel *_callbackChannel;
-NSObject<FlutterPluginRegistrar> *_registrar;
+NSObject<FlutterPluginRegistrar> *_audioplayers_registrar;
 int64_t _updateHandleMonitorKey;
 bool headlessServiceInitialized = false;
 
@@ -47,7 +47,7 @@ int _duration;
 float _playbackRate = 1.0;
 
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
-  _registrar = registrar;
+  _audioplayers_registrar = registrar;
   FlutterMethodChannel* channel = [FlutterMethodChannel
                                    methodChannelWithName:CHANNEL_NAME
                                    binaryMessenger:[registrar messenger]];
