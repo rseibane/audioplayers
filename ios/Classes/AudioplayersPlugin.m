@@ -107,7 +107,7 @@ float _playbackRate = 1.0;
       // MethodCallDelegate or else we get an illegal memory access. If we don't
       // want to make calls from `_backgroundCallDispatcher` back to native code,
       // we don't need to add a MethodCallDelegate for this channel.
-      [_registrar addMethodCallDelegate:self channel:_callbackChannel];
+      [_audioplayers_registrar addMethodCallDelegate:self channel:_callbackChannel];
   }
 }
 
